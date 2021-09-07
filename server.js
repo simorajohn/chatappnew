@@ -14,15 +14,15 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:false}))
 
 //mongodb+srv://Admin:<password>@chatapp.vrbrl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
-var dbUrl = 'mongodb+srv://Admin:Sh268268@chatapp.vrbrl.mongodb.net/chatappdb?retryWrites=true&w=majority'
+var dbUrl = 'mongodb+srv://Admin:Jan261991@freecluster.dd1az.mongodb.net/chatappnewdb?retryWrites=true&w=majority'
 
 var Message = mongoose.model('Message', {
     name : String, message: String
 })
 // var messages = [
-//     {name: "John", message: "Hello from Sydney send by hard code"}, 
-//     {name: "Rose", message: "Nice to see you send by hard code"}
-// ]
+ //   {name: "John", message: "Hello from Sydney send by hard code"}, 
+ //   {name: "Rose", message: "Nice to see you send by hard code"}
+//]
 app.get('/messages', (req, res) => {
     //res.send("Hello World from server by John")
     Message.find({}, (err, messages) => {
